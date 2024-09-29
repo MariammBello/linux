@@ -1,0 +1,8 @@
+Please choose an option:
+1) Run exercise
+2) Delete accounts
+3) Exit
+Enter your choice: Deleting users: testmariam_admin, testmariam_support, testmariam_engineering
+Deleting groups: testadmin, testsupport, testengineering
+Removing testadmin group from sudoers
+Accounts and groups deleted.
