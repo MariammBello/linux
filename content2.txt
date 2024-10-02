@@ -15,25 +15,24 @@ Submit the contents of /etc/passwd, /etc/group, /etc/sudoers
 -
 Creating groups
 -
-testadmin:x:1017:
-testsupport:x:1018:
-testengineering:x:1019:
+group_admin:x:1017:
+group_support:x:1018:
+group_engineering:x:1019:
 -
 Creating users and adding them to their respective groups
 -
-testmariam_admin:x:1009:1016::/home/testmariam_admin:/bin/sh
-testmariam_support:x:1010:1020::/home/testmariam_support:/bin/sh
-testmariam_engineering:x:1011:1021::/home/testmariam_engineering:/bin/sh
+user_admin:x:1010:1020::/home/user_admin:/bin/sh
+user_support:x:1011:1021::/home/user_support:/bin/sh
+user_engineering:x:1012:1022::/home/user_engineering:/bin/sh
 -
 Granting sudo privileges to the required user
 -
 %admin ALL=(ALL:ALL) ALL
 -
 Generating SSH keys for admin user
-/home/testmariam_admin/.ssh/id_rsa already exists.
-Overwrite (y/n)? -
+-
 total 16
-drwx------ 2 testmariam_admin testmariam_admin 4096 Sep 30 09:12 .
-drwxr-xr-x 3 testmariam_admin testmariam_admin 4096 Sep 30 09:12 ..
--rw------- 1 testmariam_admin testmariam_admin 3401 Oct  2 09:04 id_rsa
--rw-r--r-- 1 testmariam_admin testmariam_admin  755 Oct  2 09:04 id_rsa.pub
+drwx------ 2 user_admin user_admin 4096 Oct  2 09:42 .
+drwxr-xr-x 3 user_admin user_admin 4096 Oct  2 09:42 ..
+-rw------- 1 user_admin user_admin 3389 Oct  2 09:42 id_rsa
+-rw-r--r-- 1 user_admin user_admin  749 Oct  2 09:42 id_rsa.pub

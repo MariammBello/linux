@@ -15,64 +15,66 @@ Exercise() {
 # Function to create groups
 create_groups() {
     echo "-"    
-    sudo groupadd testadmin
-    sudo groupadd testsupport
-    sudo groupadd testengineering
+    sudo groupadd group_admin
+    sudo groupadd group_support
+    sudo groupadd group_engineering
 }
 
+
+#Function to show created groups
 show_groups() {
    echo "-"
    echo "Creating groups"
    echo "-"
-   cat  /etc/group | grep 'testadmin\|testsupport\|testengineering'
+   cat  /etc/group | grep 'group_admin\|group_support\|group_engineering'
 
 }
 #
 # Function to create users and add them to respective groups (no passwords required)
 create_users() {
     echo "-"
-    sudo useradd -m -G testadmin testmariam_admin
-    sudo useradd -m -G testsupport testmariam_support
-    sudo useradd -m -G testengineering testmariam_engineering
+    sudo useradd -m -G group_admin user_admin
+    sudo useradd -m -G group_support user_support
+    sudo useradd -m -G group_engineering user_engineering
 }
 
 show_users() {
     echo "Creating users and adding them to their respective groups"
     echo "-"
-    cat /etc/passwd | grep 'testmariam_admin\|testmariam_support\|testmariam_engineering'
+    cat /etc/passwd | grep 'user_admin\|user_support\|user_engineering'
 
 }
 
-# Ensure testadmin group is a sudoer by adding it to /etc/sudoers
-add_testadmin_to_sudoers() {
+# Ensure group is a sudoer by adding it to /etc/sudoers
+add_group_to_sudoers() {
     echo "-"
     echo "Granting sudo privileges to the required user"
     echo "-"
     
     # Add the admin group to the sudoers file if it's not already there
-    sudo grep '^%testadmin' /etc/sudoers > /dev/null
+    sudo grep '^%group_admin' /etc/sudoers > /dev/null
     if [ $? -ne 0 ]; then
         echo "%admin ALL=(ALL:ALL) ALL" | sudo EDITOR="tee -a" visudo
      else
-        echo "The testadmin group already has sudo privileges."
+        echo "The group_admin group already has sudo privileges."
     fi
 }
 
 
-# Function to generate SSH keys for testmariam_admin
+# Function to generate SSH keys for user_admin
 generate_ssh_keys() {
     echo "-"
     echo "Generating SSH keys for admin user"
-    sudo -u testmariam_admin ssh-keygen -t rsa -b 4096 -f /home/testmariam_admin/.ssh/id_rsa -N "" -q
+    sudo -u user_admin ssh-keygen -t rsa -b 4096 -f /home/user_admin/.ssh/id_rsa -N "" -q
 }
 
 # Function to list RSA files
 list_rsa_files() {
-    if [ -d /home/testmariam_admin/.ssh ]; then
-        # Switch to testmariam_admin to avoid permission issues
-        sudo -u testmariam_admin ls -al /home/testmariam_admin/.ssh
+    if [ -d /home/user_admin/.ssh ]; then
+        # Switch to user_admin to avoid permission issues
+        sudo -u user_admin ls -al /home/user_admin/.ssh
     else
-        echo "No RSA key directory found for testmariam_admin"
+        echo "No RSA key directory found for user_admin"
     fi
 }
 
@@ -86,18 +88,18 @@ list_rsa() {
 
 # Function to delete the users and groups created
 delete_accounts() {
-    echo "Deleting users: testmariam_admin, testmariam_support, testmariam_engineering"
-    sudo userdel -r testmariam_admin
-    sudo userdel -r testmariam_support
-    sudo userdel -r testmariam_engineering
+    echo "Deleting users"
+    sudo userdel -r user_admin
+    sudo userdel -r user_support
+    sudo userdel -r user_engineering
 
-    echo "Deleting groups: testadmin, testsupport, testengineering"
-    sudo groupdel testadmin
-    sudo groupdel testsupport
-    sudo groupdel testengineering
+    echo "Deleting groups"
+    sudo groupdel group_admin
+    sudo groupdel group_support
+    sudo groupdel group_engineering
 
-    echo "Removing testadmin group from sudoers"
-    sudo sed -i '/^%testadmin/d' /etc/sudoers
+    echo "Removing group from sudoers"
+    sudo sed -i '/^%group_admin/d' /etc/sudoers
 
     echo "Accounts and groups deleted."
 }
@@ -109,7 +111,7 @@ run_assignment() {
     show_groups
     create_users
     show_users
-    add_testadmin_to_sudoers  # Add testadmin group to sudoers
+    add_group_to_sudoers
     generate_ssh_keys
     list_rsa
 }
