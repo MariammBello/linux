@@ -82,7 +82,7 @@ list_rsa_files() {
 # Function to display results (contents of /etc/passwd, /etc/group, /etc/sudoers)
 list_rsa() {
     echo "-"
-    # List RSA key files for testmariam_admin
+    # List RSA key files for the user
     list_rsa_files
 }
 
