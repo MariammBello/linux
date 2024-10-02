@@ -1,0 +1,38 @@
+Please choose an option:
+1) Run exercise
+2) Delete accounts
+3) Exit
+Enter your choice: -
+Exercise
+-
+1. Create 3 groups – admin, support & engineering and add the admin group to sudoers.
+2. Create a user in each of the groups.
+3. Generate SSH keys for the user in the admin group.
+-
+Instruction:
+Submit the contents of /etc/passwd, /etc/group, /etc/sudoers
+-
+-
+Creating groups
+-
+group_admin:x:1017:
+group_support:x:1018:
+group_engineering:x:1019:
+-
+Creating users and adding them to their respective groups
+-
+user_admin:x:1010:1020::/home/user_admin:/bin/sh
+user_support:x:1011:1021::/home/user_support:/bin/sh
+user_engineering:x:1012:1022::/home/user_engineering:/bin/sh
+-
+Granting sudo privileges to the required user
+-
+%admin ALL=(ALL:ALL) ALL
+-
+Generating SSH keys for admin user
+-
+total 16
+drwx------ 2 user_admin user_admin 4096 Oct  2 11:22 .
+drwxr-xr-x 3 user_admin user_admin 4096 Oct  2 11:22 ..
+-rw------- 1 user_admin user_admin 3389 Oct  2 11:22 id_rsa
+-rw-r--r-- 1 user_admin user_admin  749 Oct  2 11:22 id_rsa.pub
