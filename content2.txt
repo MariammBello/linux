@@ -3,6 +3,16 @@ Please choose an option:
 2) Delete accounts
 3) Exit
 Enter your choice: -
+Exercise
+-
+1. Create 3 groups – admin, support & engineering and add the admin group to sudoers.
+2. Create a user in each of the groups.
+3. Generate SSH keys for the user in the admin group.
+-
+Instruction:
+Submit the contents of /etc/passwd, /etc/group, /etc/sudoers
+-
+-
 Creating groups
 -
 testadmin:x:1017:
@@ -25,5 +35,5 @@ Overwrite (y/n)? -
 total 16
 drwx------ 2 testmariam_admin testmariam_admin 4096 Sep 30 09:12 .
 drwxr-xr-x 3 testmariam_admin testmariam_admin 4096 Sep 30 09:12 ..
--rw------- 1 testmariam_admin testmariam_admin 3401 Oct  2 08:54 id_rsa
--rw-r--r-- 1 testmariam_admin testmariam_admin  755 Oct  2 08:54 id_rsa.pub
+-rw------- 1 testmariam_admin testmariam_admin 3401 Oct  2 09:04 id_rsa
+-rw-r--r-- 1 testmariam_admin testmariam_admin  755 Oct  2 09:04 id_rsa.pub

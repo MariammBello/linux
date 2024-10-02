@@ -1,10 +1,13 @@
 #!/bin/bash
 
 Exercise() {
-    echo "Create 3 groups – admin, support & engineering and add the admin group to sudoers."
-    echo "Create a user in each of the groups."
-    echo "Generate SSH keys for the user in the admin group."
-
+    echo "-"
+    echo "Exercise"
+    echo "-"
+    echo "1. Create 3 groups – admin, support & engineering and add the admin group to sudoers."
+    echo "2. Create a user in each of the groups."
+    echo "3. Generate SSH keys for the user in the admin group."
+    echo "-"
     echo "Instruction:"
     echo "Submit the contents of /etc/passwd, /etc/group, /etc/sudoers"
 }
@@ -18,6 +21,7 @@ create_groups() {
 }
 
 show_groups() {
+   echo "-"
    echo "Creating groups"
    echo "-"
    cat  /etc/group | grep 'testadmin\|testsupport\|testengineering'
@@ -100,6 +104,7 @@ delete_accounts() {
 
 # Main function to run the assignment
 run_assignment() {
+    Exercise
     create_groups
     show_groups
     create_users
