@@ -33,6 +33,7 @@ This command will output the lines from /etc/group related to the groups we just
 
 ### Creating Users and Adding Them to Groups
 Next, create one user for each group: user_admin for the groupadmin, user_support for the groupsupport, and user_engineering for the groupengineering.
+Passwds are manually removed for running the script simply without any in-between prompts. Ideally passwords should be included
 
 Commands to Create Users:
 ```
@@ -40,6 +41,13 @@ sudo useradd -m -G groupadmin user_admin
 sudo useradd -m -G groupsupport user_support
 sudo useradd -m -G groupengineering user_engineering
 ```
+Commands to remove password for script simplicity
+```
+sudo passwd -d user_admin
+sudo passwd -d user_support
+sudo passwd -d user_engineering
+```
+
 ```useradd```: Creates a new user.
 ```-m```: Automatically creates a home directory for the user.
 ```-G```: Assigns the user to the specified group.
@@ -150,6 +158,7 @@ The script is modularized, meaning each task is handled by a separate function. 
 # Create groups and users
 create_groups() { ... }
 create_users() { ... }
+exclude_passwd() { ... }
 
 # Verify that groups and users were created
 show_groups() { ... }

@@ -21,6 +21,8 @@ create_groups() {
 }
 
 
+
+
 #Function to show created groups
 show_groups() {
    echo "-"
@@ -36,6 +38,12 @@ create_users() {
     sudo useradd -m -G group_admin user_admin
     sudo useradd -m -G group_support user_support
     sudo useradd -m -G group_engineering user_engineering
+}
+
+exclude_passwd() {
+    sudo passwd -d user_admin
+    sudo passwd -d user_support
+    sudo passwd -d user_engineering
 }
 
 show_users() {
