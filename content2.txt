@@ -2,7 +2,28 @@ Please choose an option:
 1) Run exercise
 2) Delete accounts
 3) Exit
-Enter your choice: Deleting users: testmariam_admin, testmariam_support, testmariam_engineering
-Deleting groups: testadmin, testsupport, testengineering
-Removing testadmin group from sudoers
-Accounts and groups deleted.
+Enter your choice: -
+Creating groups
+-
+testadmin:x:1017:
+testsupport:x:1018:
+testengineering:x:1019:
+-
+Creating users and adding them to their respective groups
+-
+testmariam_admin:x:1009:1016::/home/testmariam_admin:/bin/sh
+testmariam_support:x:1010:1020::/home/testmariam_support:/bin/sh
+testmariam_engineering:x:1011:1021::/home/testmariam_engineering:/bin/sh
+-
+Granting sudo privileges to the required user
+-
+%admin ALL=(ALL:ALL) ALL
+-
+Generating SSH keys for admin user
+/home/testmariam_admin/.ssh/id_rsa already exists.
+Overwrite (y/n)? -
+total 16
+drwx------ 2 testmariam_admin testmariam_admin 4096 Sep 30 09:12 .
+drwxr-xr-x 3 testmariam_admin testmariam_admin 4096 Sep 30 09:12 ..
+-rw------- 1 testmariam_admin testmariam_admin 3401 Oct  2 08:54 id_rsa
+-rw-r--r-- 1 testmariam_admin testmariam_admin  755 Oct  2 08:54 id_rsa.pub

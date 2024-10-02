@@ -254,3 +254,103 @@ cat exercise1.sh
 clear
 cat exercise1.sh
 cat > exercise1.sh
+ls
+./testexercise1.sh
+nano testexercise1.sh
+./testexercise1.sh
+nano testexercise1.sh
+./testexercise1.sh
+./ testexercise1.sh
+./user_management.sh
+cat testexercise1.sh
+ls -l
+./testexercise1.sh.save
+./testexercise1.sh
+cat testexercise1.sh.save
+./testexercise1.sh
+cat testexercise1.sh
+bash -x ./testexercise1.sh
+bash -x ./testexercise1.sh.save
+cat /etc/passwd
+sudo groupdel | grep testmariam
+sudo groupdel testadmin
+sudo groupdel testsupport
+sudo groupdel testadmin
+sudo groupdel testengineering
+sudo userdel testmariam_admin
+sudo userdel testmariam_support
+sudo userdel testmariam_engineering
+cat /etc/passwd
+cat /etc/group
+./testexercise.sh
+./testexercise1.sh
+cat testexercise1.sh
+sh testexercise1.sh
+sh testexercise1.sh.save
+cat testexercise.sh.save
+cat testexercise1.sh.save
+nano testexercise1.sh
+./testexercise1.sh
+cat /etc/passwd
+cat /etc/group
+sudo cat /etc/sudoers
+./testexercise1.sh
+cat /etc/passwd
+nano testexercise1.sh
+clear
+./testexercise1.sh
+bash -x ./testexercise1.sh
+nano testexercise1.sh
+
+nano testexercise1.sh
+bash -x ./testexercise1.sh
+
+./testexercise1.sh > content.txt
+cat testexercise1.sh
+ls
+
+cat content.txt
+3
+./testexercise1.sh | tee content.txt
+
+cat content.txt
+./testexercise1.sh | tee content.txt
+cat content.txt
+nano testexercise1.sh
+cp testexercise1.sh testexercise2.sh
+nano testexercise2.sh
+./testexercise2.sh | tee content2.txt
+nano testexercise2.sh
+./testexercise2.sh | tee content2.txt
+bash -x ./testexercise2.sh | tee content2.txt
+nano testexercise2.sh
+./testexercise2.sh | tee content2.txt
+nano testexercise2.sh
+./testexercise2.sh | tee content2.txt
+nano testexercise2.sh
+./testexercise2.sh | tee content2.txt
+nano testexercise2.sh
+./testexercise2.sh | tee content2.txt
+pwd
+sudo apt update
+sudo apt install git
+git config --global user.name "mariammbello"
+git config --global user.email "sheactuary@gmail.com"
+ls -l
+cat content2.txt
+git init
+git add .
+git commit -m "Adding user management flow"
+git remote add origin https://github.com/MariammBello/linux.git
+git push -u origin main
+git push -u origin master
+git remote -v
+ls
+git status
+git branch -M main
+git push -u origin main
+ping 8.8.8.8
+ping github.com
+ping google.com
+ls
+pwd
