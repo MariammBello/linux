@@ -67,7 +67,7 @@ This command lists all groups on the system from the /etc/group file.
 displays the network interface configuration, including IP addresses, netmask, and more.
 ```
 ifconfig
-``
+```
 
 # 10. Modify user permissions on a file
 
