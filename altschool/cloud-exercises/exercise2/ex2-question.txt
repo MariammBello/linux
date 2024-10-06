@@ -1,5 +1,3 @@
-
-
 # Question Exercise 2
 
 Task: Research online for 10 more linux commands aside the ones already mentioned in this module. 

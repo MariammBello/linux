@@ -1,3 +1,10 @@
+# Question Exercise 2
+
+Task: Research online for 10 more linux commands aside the ones already mentioned in this module.
+Submit using your altschool-cloud-exercises project, explaining what each command is used for with examples of how to use each and example screenshots of using each of them.
+
+Instruction: Submit your work in a folder for this exercise in your altschool-cloud-exercises project. You will need to learn how to embed images in markdown files.
+
 # 1. Create User:
 
 The useradd command is used to create a new user. The -m flag creates a home directory for the new user, and the -s option specifies the login shell (in this case, /bin/bash).

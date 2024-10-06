@@ -1,4 +1,3 @@
-
 # Exercise Question:
 1. Create three groups: admin, support, and engineering (you can modify the names to suit your needs).
 2. Create a user in each group.
