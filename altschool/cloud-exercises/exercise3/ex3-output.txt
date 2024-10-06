@@ -32,7 +32,7 @@ Granting sudo privileges to the required user
 Generating SSH keys for admin user
 -
 total 16
-drwx------ 2 user_admin user_admin 4096 Oct  2 18:58 .
-drwxr-xr-x 3 user_admin user_admin 4096 Oct  2 18:58 ..
--rw------- 1 user_admin user_admin 3389 Oct  2 18:58 id_rsa
--rw-r--r-- 1 user_admin user_admin  749 Oct  2 18:58 id_rsa.pub
+drwx------ 2 user_admin user_admin 4096 Oct  6 13:33 .
+drwxr-xr-x 3 user_admin user_admin 4096 Oct  6 13:33 ..
+-rw------- 1 user_admin user_admin 3389 Oct  6 13:33 id_rsa
+-rw-r--r-- 1 user_admin user_admin  749 Oct  6 13:33 id_rsa.pub
