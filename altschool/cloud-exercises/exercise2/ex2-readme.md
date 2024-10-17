@@ -41,7 +41,7 @@ These options enhance password security and enforce timely updates
 ```
 cat /etc/passwd | grep newuser
 ```
-![check user image] (../vagrant_images/exercise_2_images/cat_etc.png)
+![check user image](../vagrant_images/exercise_2_images/cat_etc.png)
 
 # 5. Switch User:
  The ```su``` command allows you to switch to another user. The - option provides a login shell with the user's environment.
@@ -49,21 +49,21 @@ cat /etc/passwd | grep newuser
 ```
 su - newuser
 ```
-![switch user image] (../vagrant_images/exercise_2_images/switch_user.png)
+![switch user image](../vagrant_images/exercise_2_images/switch_user.png)
 
 # 6. Create Group:
 ```groupadd``` creates a new group that users can be added to.
 ```
 sudo groupadd newgroup
 ```
-![groupadd image] (../vagrant_images/exercise_2_images/user_group.png)
+![groupadd image](../vagrant_images/exercise_2_images/user_group.png)
 
 
 # 7. Add User to Group:
 ```
 sudo usermod -aG newgroup newuser
 ```
-![add group to user] (../vagrant_images/exercise_2_images/add_user_to_group.png)
+![add group to user](../vagrant_images/exercise_2_images/add_user_to_group.png)
 
 
 ### Explanation
@@ -88,7 +88,7 @@ The command helps measure round-trip time, detect packet loss, and determine whe
 ping github.com
 ```
 
-![ping image] (../vagrant_images/exercise_2_images/ping.png)
+![ping image](../vagrant_images/exercise_2_images/ping.png)
 
 # 9.  Check Network Configuration:
 The ip a command is a shorthand for ip address and is used to display detailed information about all network interfaces on a Linux system. It shows information such as:
@@ -102,7 +102,7 @@ This command provides a more detailed and modern replacement for ifconfig to vie
 ```
 ip a
 ```
-![ipa image] (../vagrant_images/exercise_2_images/ipa.png)
+![ipa image](../vagrant_images/exercise_2_images/ipa.png)
 
 # 10. Modify user permissions on a file
 
