@@ -11,14 +11,14 @@ The useradd command is used to create a new user. The -m flag creates a home dir
 ```
 sudo useradd -m -s /bin/bash newuser
 ```
-![user created image] (~/altschool/cloud-exercises/vagrant_images/exercise_2_images/user.png)
+![user created image] (vagrant_images/exercise_2_images/user.png)
 
 # 2. Set Password:
 The passwd command is used to set or change the password for a user.
 ```
 sudo passwd newuser
 ```
-![password created image] (~/altschool/cloud-exercises/vagrant_images/exercise_2_images/passwd.png)
+![password created image] (..//vagrant_images/exercise_2_images/passwd.png)
 
 
 # 3. Establishing user password policies
@@ -33,7 +33,7 @@ These options enhance password security and enforce timely updates
 ```
 /etc/passwd
 ```
-![passwd created image] (~/altschool/cloud-exercises/vagrant_images/exercise_2_images/passwd_change.png)
+![passwd created image] (/vagrant_images/exercise_2_images/passwd_change.png)
 
 
 # 4. Check specific User:
@@ -41,7 +41,7 @@ These options enhance password security and enforce timely updates
 ```
 cat /etc/passwd | grep newuser
 ```
-![check user image] (~/altschool/cloud-exercises/vagrant_images/exercise_2_images/cat_etc.png)
+![check user image] (../../../vagrant_images/exercise_2_images/cat_etc.png)
 
 # 5. Switch User:
  The ```su``` command allows you to switch to another user. The - option provides a login shell with the user's environment.
