@@ -11,7 +11,7 @@ The useradd command is used to create a new user. The -m flag creates a home dir
 ```
 sudo useradd -m -s /bin/bash newuser
 ```
-![user created image] (vagrant_images/exercise_2_images/user.png)
+![user created image] (altschool/cloud-exercises/vagrant_images/exercise_2_images/user.png)
 
 # 2. Set Password:
 The passwd command is used to set or change the password for a user.
