@@ -18,7 +18,7 @@ The passwd command is used to set or change the password for a user.
 ```
 sudo passwd newuser
 ```
-![password created image] (..//vagrant_images/exercise_2_images/passwd.png)
+![password created image] (../vagrant_images/exercise_2_images/passwd.png)
 
 
 # 3. Establishing user password policies
